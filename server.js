@@ -34,7 +34,7 @@ app.get('/location', (req, res) => {
     }
 });
 
-// Start the server using HTTPS
-https.createServer(sslOptions, app).listen(port,'0.0.0.0', () => {
-    console.log(`Secure server running at https://192.168.5.141:${port}`);
+// Start the server using HTTPS and bind to 0.0.0.0
+https.createServer(sslOptions, app).listen(port, '0.0.0.0', () => {
+    console.log(`Secure server running at https://0.0.0.0:${port}`);
 });
